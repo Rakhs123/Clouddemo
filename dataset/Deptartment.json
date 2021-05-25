@@ -1,0 +1,34 @@
+{
+	"name": "Deptartment",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "DEPT.txt",
+				"folderPath": "input",
+				"container": "global"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEPT",
+				"type": "String"
+			},
+			{
+				"name": "HR",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
